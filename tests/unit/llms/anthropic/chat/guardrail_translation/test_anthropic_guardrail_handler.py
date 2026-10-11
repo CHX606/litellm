@@ -222,7 +222,7 @@ class TestAnthropicMessagesHandlerStreamingRequestData:
         with (
             patch.object(handler, "_check_streaming_has_ended", return_value=True),
             patch(
-                "litellm.llms.anthropic.chat.guardrail_translation.handler.AnthropicPassthroughLoggingHandler._build_complete_streaming_response",
+                "litellm.llms.anthropic.chat.guardrail_translation.handler.build_complete_streaming_response",
                 return_value=mock_response,
             ),
         ):
@@ -281,7 +281,7 @@ class TestAnthropicMessagesHandlerStreamingOutputProcessing:
         with (
             patch.object(handler, "_check_streaming_has_ended", return_value=True),
             patch(
-                "litellm.llms.anthropic.chat.guardrail_translation.handler.AnthropicPassthroughLoggingHandler._build_complete_streaming_response",
+                "litellm.llms.anthropic.chat.guardrail_translation.handler.build_complete_streaming_response",
                 return_value=None,
             ),
         ):
@@ -1393,7 +1393,7 @@ class TestAnthropicMessagesHandlerInputProcessing:
         with (
             patch.object(handler, "_check_streaming_has_ended", return_value=True),
             patch(
-                "litellm.llms.anthropic.chat.guardrail_translation.handler.AnthropicPassthroughLoggingHandler._build_complete_streaming_response",
+                "litellm.llms.anthropic.chat.guardrail_translation.handler.build_complete_streaming_response",
                 return_value=mock_response,
             ),
         ):
@@ -1440,7 +1440,7 @@ class TestAnthropicMessagesHandlerInputProcessing:
         with (
             patch.object(handler, "_check_streaming_has_ended", return_value=True),
             patch(
-                "litellm.llms.anthropic.chat.guardrail_translation.handler.AnthropicPassthroughLoggingHandler._build_complete_streaming_response",
+                "litellm.llms.anthropic.chat.guardrail_translation.handler.build_complete_streaming_response",
                 return_value=mock_response,
             ),
         ):
